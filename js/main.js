@@ -321,7 +321,7 @@ function initSkillsFilters() {
    8. Dynamic GitHub Showcase Fetcher
    ========================================== */
 function initGitHubShowcase() {
-  const username = 'leomaxvj';
+  const username = 'devilkig893-alt';
   const url = `https://api.github.com/users/${username}`;
   
   // Backup static data if GitHub rate limit is hit or network fails
