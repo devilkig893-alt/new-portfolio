@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- SEO Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manoj Kumar | Premium Recruiter-Focused Developer Portfolio</title>
+  <meta name="description" content="React Native & React.js Developer with 3.5+ years of experience building scalable, high-performance web and mobile applications. Specializing in React, Angular, Next.js, and Swift.">
+  <meta name="keywords" content="Manoj Kumar, React Native Developer, Frontend Developer, React Developer, Angular Developer, iOS Developer, Web Developer, Resume, portfolio">
+  <meta name="author" content="Manoj Kumar">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicons/favicon.ico">
+
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress"></div>
+
+  <!-- Custom Cursor Follower -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Interactive Particle Background Canvas -->
+  <canvas id="bg-particles"></canvas>
+
+  <!-- Background Glowing Orbs -->
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <div class="glow-orb glow-orb-3"></div>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container">
+      <a href="#hero" class="logo">Manoj <span>Kumar</span></a>
+      
+      <nav class="nav-links">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#summary" class="nav-link">Summary</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#github" class="nav-link">GitHub</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Light/Dark Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+          <i class="fas fa-moon icon-moon"></i>
+          <i class="fas fa-sun icon-sun"></i>
+        </button>
+        <!-- Download CV Button -->
+        <a href="images/Manoj Kumar V.pdf" download class="btn btn-primary" id="header-cv-btn">
+          <i class="fas fa-download"></i> <span class="d-none-mobile">Resume</span>
+        </a>
+        <!-- Mobile Menu Trigger -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Mobile Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 1: HERO SECTION -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="hero-badge">
+          <i class="fas fa-code"></i> Frontend & Mobile Application Developer
+        </div>
+        <h1 class="hero-title">Hi, I'm Manoj Kumar 👋</h1>
+        <h2 class="hero-subtitle"><span id="typed-text" class="gradient-text"></span><span class="cursor-blink">|</span></h2>
+        <p class="hero-desc">
+          Specializing in building high-performance, responsive cross-platform mobile apps and modern web platforms. 
+          3.5+ years of experience converting complex business logic into beautiful digital experiences.
+        </p>
+
+        <!-- Tech tags above fold -->
+        <div class="hero-skills-tag">
+          <span class="skill-tag">React.js</span>
+          <span class="skill-tag">React Native</span>
+          <span class="skill-tag">Angular</span>
+          <span class="skill-tag">Next.js</span>
+          <span class="skill-tag">Redux Toolkit</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Swift</span>
+          <span class="skill-tag">Node.js</span>
+        </div>
+
+        <!-- Primary CTA Buttons -->
+        <div class="hero-ctas">
+          <a href="images/Manoj Kumar V.pdf" download class="btn btn-primary">
+            <i class="fas fa-file-download"></i> Download Resume
+          </a>
+          <a href="#projects" class="btn btn-secondary">
+            <i class="fas fa-tasks"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+
+        <!-- Social CTAs prominently above fold -->
+        <div class="social-ctas">
+          <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Connect:</span>
+          <a href="https://github.com/leomaxvj" target="_blank" class="social-cta-link github" aria-label="GitHub Profile">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/manoj-kumar-95599a225/" target="_blank" class="social-cta-link linkedin" aria-label="LinkedIn Profile">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual Graphic -->
+      <div class="hero-visual scale-in">
+        <div class="hero-image-wrap">
+          <div class="hero-image-inner">
+            <img src="images/man2.JPG" alt="Manoj Kumar">
+          </div>
+        </div>
+        <!-- Floating details -->
+        <div class="hero-visual-card card-native">
+          <i class="fab fa-react" style="color: #61dafb; font-size: 1.5rem;"></i>
+          <div>
+            <div style="color: var(--text-primary);">Mobile Apps</div>
+            <div style="font-size: 0.75rem; color: var(--text-secondary); font-weight: 400;">React Native & iOS</div>
+          </div>
+        </div>
+        <div class="hero-visual-card card-web">
+          <i class="fas fa-laptop-code" style="color: var(--accent-purple); font-size: 1.3rem;"></i>
+          <div>
+            <div style="color: var(--text-primary);">Web Platforms</div>
+            <div style="font-size: 0.75rem; color: var(--text-secondary); font-weight: 400;">React.js & Next.js</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: PROFESSIONAL SUMMARY -->
+  <section id="summary" class="section">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <h2 class="section-title gradient-text">Professional Summary</h2>
+        <p class="section-subtitle">A quick insight into my core architectural focus areas and development experience.</p>
+      </div>
+
+      <div class="summary-grid">
+        <!-- Card 1: Mobile Development -->
+        <div class="glass-panel summary-card reveal">
+          <div class="summary-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3 class="summary-title">Mobile App Development</h3>
+          <p class="summary-text">
+            Specializing in React Native CLI and Expo to design robust, cross-platform Android & iOS applications. 
+            Expanding skillset into native Apple ecosystems utilizing Swift, SwiftUI, and UIKit.
+          </p>
+          <div class="summary-bullets">
+            <div class="summary-bullet"><i class="fas fa-check-circle"></i> <span>Custom Native Module integration</span></div>
+            <div class="summary-bullet"><i class="fas fa-check-circle"></i> <span>React Native Paper UI implementation</span></div>
+            <div class="summary-bullet"><i class="fas fa-check-circle"></i> <span>App Store & Play Store publication</span></div>
+          </div>
+        </div>
+
+        <!-- Card 2: Web Development -->
+        <div class="glass-panel summary-card reveal" style="animation-delay: 0.2s;">
+          <div class="summary-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3 class="summary-title">Frontend Web Engineering</h3>
+          <p class="summary-text">
+            Designing responsive, dynamic, and fast loading web applications. Leveraging Angular, Next.js, and Redux Toolkit 
+            for state management and clean modular architecture.
+          </p>
+          <div class="summary-bullets">
+            <div class="summary-bullet"><i class="fas fa-check-circle"></i> <span>React.js & Next.js server-side rendering</span></div>
+            <div class="summary-bullet"><i class="fas fa-check-circle"></i> <span>Angular Enterprise dashboard design</span></div>
+            <div class="summary-bullet"><i class="fas fa-check-circle"></i> <span>Theme control & responsive breakpoints</span></div>
+          </div>
+        </div>
+
+        <!-- Card 3: Backend & Tools -->
+        <div class="glass-panel summary-card reveal" style="animation-delay: 0.4s;">
+          <div class="summary-icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <h3 class="summary-title">API Integration & Database</h3>
+          <p class="summary-text">
+            Integrating robust RESTful endpoints with Node.js and Express.js backends. Configuring database layers 
+            using Firestore, Firebase, and MongoDB, alongside Git workflows.
+          </p>
+          <div class="summary-bullets">
+            <div class="summary-bullet"><i class="fas fa-check-circle"></i> <span>Secure token-based REST API access</span></div>
+            <div class="summary-bullet"><i class="fas fa-check-circle"></i> <span>Offline-first local DB synchronization</span></div>
+            <div class="summary-bullet"><i class="fas fa-check-circle"></i> <span>Performance profiling & load testing</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: ACHIEVEMENT STATISTICS -->
+  <!-- <section id="statistics" class="section stats-section">
+    <div class="container stats-grid"> -->
+      <!-- Stat 1 -->
+      <!-- <div class="glass-panel stat-card reveal">
+        <div class="stat-num" data-target="3.5" data-plus="true" data-decimals="1">0</div>
+        <div class="stat-label">Years of Professional Experience</div>
+      </div> -->
+      <!-- Stat 2 -->
+      <!-- <div class="glass-panel stat-card reveal" style="animation-delay: 0.1s;">
+        <div class="stat-num" data-target="15" data-plus="true" data-decimals="0">0</div>
+        <div class="stat-label">Completed Software Projects</div>
+      </div> -->
+      <!-- Stat 3 -->
+      <!-- <div class="glass-panel stat-card reveal" style="animation-delay: 0.2s;">
+        <div class="stat-num" data-target="5" data-plus="true" data-decimals="0">0</div>
+        <div class="stat-label">Mobile Apps Published</div>
+      </div> -->
+      <!-- Stat 4 -->
+      <!-- <div class="glass-panel stat-card reveal" style="animation-delay: 0.3s;">
+        <div class="stat-num" data-target="10" data-plus="true" data-decimals="0">0</div>
+        <div class="stat-label">Web Apps Developed</div>
+      </div> -->
+      <!-- Stat 5 -->
+      <!-- <div class="glass-panel stat-card reveal" style="animation-delay: 0.4s;">
+        <div class="stat-num" data-target="20" data-plus="true" data-decimals="0">0</div>
+        <div class="stat-label">REST API Integrations</div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- SECTION 4: SKILLS SECTION -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <h2 class="section-title gradient-text">Core Expertise</h2>
+        <p class="section-subtitle">Clean organized layout of tools, languages, and libraries I use to build production systems.</p>
+      </div>
+
+      <!-- Skills Tab Headers -->
+      <div class="skills-tabs reveal">
+        <button class="skills-tab-btn active" data-category="all">All Skills</button>
+        <button class="skills-tab-btn" data-category="frontend">Frontend Web</button>
+        <button class="skills-tab-btn" data-category="mobile">Mobile Dev</button>
+        <button class="skills-tab-btn" data-category="state">State Mgmt</button>
+        <button class="skills-tab-btn" data-category="ui">UI Libraries</button>
+        <button class="skills-tab-btn" data-category="backend">Backend & APIs</button>
+        <button class="skills-tab-btn" data-category="db">Database</button>
+        <button class="skills-tab-btn" data-category="tools">Dev Tools</button>
+      </div>
+
+      <!-- Skills Grid -->
+      <div class="skills-grid reveal">
+        <!-- Frontend -->
+        <div class="glass-panel skill-card" data-category="frontend">
+          <div class="skill-info">
+            <span class="skill-name">React.js</span>
+            <span class="skill-level">90%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="90%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="frontend">
+          <div class="skill-info">
+            <span class="skill-name">Angular</span>
+            <span class="skill-level">80%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="80%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="frontend">
+          <div class="skill-info">
+            <span class="skill-name">Next.js</span>
+            <span class="skill-level">85%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="85%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="frontend">
+          <div class="skill-info">
+            <span class="skill-name">JavaScript (ES6+)</span>
+            <span class="skill-level">90%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="90%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="frontend">
+          <div class="skill-info">
+            <span class="skill-name">TypeScript</span>
+            <span class="skill-level">85%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="85%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="frontend">
+          <div class="skill-info">
+            <span class="skill-name">HTML5 & CSS3</span>
+            <span class="skill-level">95%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="95%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="frontend">
+          <div class="skill-info">
+            <span class="skill-name">SCSS / Sass</span>
+            <span class="skill-level">85%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="85%"></div>
+          </div>
+        </div>
+
+        <!-- Mobile -->
+        <div class="glass-panel skill-card" data-category="mobile">
+          <div class="skill-info">
+            <span class="skill-name">React Native CLI</span>
+            <span class="skill-level">90%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="90%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="mobile">
+          <div class="skill-info">
+            <span class="skill-name">Expo</span>
+            <span class="skill-level">90%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="90%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="mobile">
+          <div class="skill-info">
+            <span class="skill-name">Android Studio</span>
+            <span class="skill-level">80%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="80%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="mobile">
+          <div class="skill-info">
+            <span class="skill-name">iOS Deployment</span>
+            <span class="skill-level">80%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="80%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="mobile">
+          <div class="skill-info">
+            <span class="skill-name">Swift</span>
+            <span class="skill-level">75%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="75%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="mobile">
+          <div class="skill-info">
+            <span class="skill-name">SwiftUI / UIKit</span>
+            <span class="skill-level">75%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="75%"></div>
+          </div>
+        </div>
+
+        <!-- State Management -->
+        <div class="glass-panel skill-card" data-category="state">
+          <div class="skill-info">
+            <span class="skill-name">Redux Toolkit</span>
+            <span class="skill-level">90%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="90%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="state">
+          <div class="skill-info">
+            <span class="skill-name">Context API</span>
+            <span class="skill-level">90%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="90%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="state">
+          <div class="skill-info">
+            <span class="skill-name">Zustand</span>
+            <span class="skill-level">85%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="85%"></div>
+          </div>
+        </div>
+
+        <!-- UI Libraries -->
+        <div class="glass-panel skill-card" data-category="ui">
+          <div class="skill-info">
+            <span class="skill-name">PrimeReact</span>
+            <span class="skill-level">85%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="85%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="ui">
+          <div class="skill-info">
+            <span class="skill-name">Material UI</span>
+            <span class="skill-level">90%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="90%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="ui">
+          <div class="skill-info">
+            <span class="skill-name">React Native Paper</span>
+            <span class="skill-level">85%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="85%"></div>
+          </div>
+        </div>
+
+        <!-- Backend & APIs -->
+        <div class="glass-panel skill-card" data-category="backend">
+          <div class="skill-info">
+            <span class="skill-name">Node.js</span>
+            <span class="skill-level">75%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="75%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="backend">
+          <div class="skill-info">
+            <span class="skill-name">Express.js</span>
+            <span class="skill-level">75%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="75%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="backend">
+          <div class="skill-info">
+            <span class="skill-name">REST APIs</span>
+            <span class="skill-level">90%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="90%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="backend">
+          <div class="skill-info">
+            <span class="skill-name">Firebase SDK</span>
+            <span class="skill-level">85%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="85%"></div>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="glass-panel skill-card" data-category="db">
+          <div class="skill-info">
+            <span class="skill-name">MongoDB</span>
+            <span class="skill-level">75%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="75%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="db">
+          <div class="skill-info">
+            <span class="skill-name">Firestore DB</span>
+            <span class="skill-level">85%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="85%"></div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="glass-panel skill-card" data-category="tools">
+          <div class="skill-info">
+            <span class="skill-name">Git & GitHub</span>
+            <span class="skill-level">90%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="90%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="tools">
+          <div class="skill-info">
+            <span class="skill-name">VS Code</span>
+            <span class="skill-level">95%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="95%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="tools">
+          <div class="skill-info">
+            <span class="skill-name">Postman</span>
+            <span class="skill-level">90%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="90%"></div>
+          </div>
+        </div>
+        <div class="glass-panel skill-card" data-category="tools">
+          <div class="skill-info">
+            <span class="skill-name">Figma UI/UX</span>
+            <span class="skill-level">85%</span>
+          </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-bar" data-level="85%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: FEATURED PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <h2 class="section-title gradient-text">Featured Projects</h2>
+        <p class="section-subtitle">A showcase of production-ready applications, highlighting challenges solved and measurable results.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="projects-filter reveal">
+        <button class="skills-tab-btn projects-filter-btn active" data-filter="all">All Projects</button>
+        <button class="skills-tab-btn projects-filter-btn" data-filter="mobile">Mobile Apps</button>
+        <button class="skills-tab-btn projects-filter-btn" data-filter="web">Web Applications</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        
+        <!-- Project 1: Mergit Delivery App -->
+        <div class="glass-panel project-card reveal" data-category="mobile">
+          <div class="project-img-wrapper">
+            <div class="project-category-badge">Mobile App</div>
+            <img src="images/work1.jpg" alt="Mergit Delivery App">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Mergit Delivery App</h3>
+            <p class="project-desc">Upgraded React Native application for food and grocery ordering featuring advanced search functionality and real-time order tracking. Built comprehensive admin panel for product management and order control.</p>
+            <div class="project-techs">
+              <span class="project-tech">React Native</span>
+              <span class="project-tech">Node.js</span>
+              <span class="project-tech">Redux Toolkit</span>
+              <span class="project-tech">Google Maps API</span>
+            </div>
+            <div class="project-meta-box">
+              <div class="project-meta-item">
+                <strong>Key Features:</strong> <span>Advanced elastic search, real-time driver GPS tracking, comprehensive admin dashboard.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Challenge Solved:</strong> <span>Optimized real-time geolocation background updates to reduce mobile battery drain.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Result Achieved:</strong> <span>Improved location tracking reliability by 50% and decreased battery consumption by 30%.</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/leomaxvj" target="_blank" class="btn btn-secondary project-link"><i class="fab fa-github"></i> Repository</a>
+              <a href="#" class="btn btn-primary project-link disabled"><i class="fas fa-external-link-alt"></i> Native App</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: E-Commerce Web App -->
+        <div class="glass-panel project-card reveal" data-category="web" style="animation-delay: 0.1s;">
+          <div class="project-img-wrapper">
+            <div class="project-category-badge">Web Application</div>
+            <img src="images/work2.jpg" alt="E-Commerce Web App">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">E-Commerce Web App</h3>
+            <p class="project-desc">Created comprehensive platform for stationery, toys, and games with complete shopping cart and checkout system. Designed admin panel for inventory and sales management.</p>
+            <div class="project-techs">
+              <span class="project-tech">React.js</span>
+              <span class="project-tech">Node.js</span>
+              <span class="project-tech">Express.js</span>
+              <span class="project-tech">MongoDB</span>
+            </div>
+            <div class="project-meta-box">
+              <div class="project-meta-item">
+                <strong>Key Features:</strong> <span>Complete shopping cart flow, secure checkout integration, inventory management dashboard.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Challenge Solved:</strong> <span>Mitigated database race conditions during bulk checkouts during high-traffic sales.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Result Achieved:</strong> <span>Maintained 100% accurate inventory sync under load testing with 1,000+ parallel sessions.</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/leomaxvj" target="_blank" class="btn btn-secondary project-link"><i class="fab fa-github"></i> Repository</a>
+              <a href="#" class="btn btn-primary project-link disabled"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Aqua Water Delivery App -->
+        <div class="glass-panel project-card reveal" data-category="mobile">
+          <div class="project-img-wrapper">
+            <div class="project-category-badge">Mobile App</div>
+            <img src="images/work3.jpg" alt="Aqua Water Delivery App">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Aqua Water Delivery App</h3>
+            <p class="project-desc">Mobile application enabling delivery scheduling, product management, and customer service. Developed admin panel for end-to-end business operations.</p>
+            <div class="project-techs">
+              <span class="project-tech">React Native</span>
+              <span class="project-tech">Node.js</span>
+              <span class="project-tech">REST APIs</span>
+              <span class="project-tech">Firebase</span>
+            </div>
+            <div class="project-meta-box">
+              <div class="project-meta-item">
+                <strong>Key Features:</strong> <span>Delivery subscription scheduling, automated calendar updates, admin operations panel.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Challenge Solved:</strong> <span>Designed local SQLite offline sync mechanisms for delivery drivers in low-connectivity zones.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Result Achieved:</strong> <span>Reduced delivery scheduling errors by 40% and improved on-time arrival rate to 98%.</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/leomaxvj" target="_blank" class="btn btn-secondary project-link"><i class="fab fa-github"></i> Repository</a>
+              <a href="#" class="btn btn-primary project-link disabled"><i class="fas fa-external-link-alt"></i> Native App</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: School Management System -->
+        <div class="glass-panel project-card reveal" data-category="web" style="animation-delay: 0.1s;">
+          <div class="project-img-wrapper">
+            <div class="project-category-badge">Web & Mobile</div>
+            <img src="images/work4.jpg" alt="School Management System">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">School Management System</h3>
+            <p class="project-desc">Admin web panel with companion parent and teacher mobile applications handling attendance monitoring, announcement communications, and student services.</p>
+            <div class="project-techs">
+              <span class="project-tech">React.js</span>
+              <span class="project-tech">React Native</span>
+              <span class="project-tech">Node.js</span>
+              <span class="project-tech">MongoDB</span>
+            </div>
+            <div class="project-meta-box">
+              <div class="project-meta-item">
+                <strong>Key Features:</strong> <span>Interactive attendance logs, push alert notifications, academic grade dashboards.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Challenge Solved:</strong> <span>Built a unified notification broker ensuring immediate push notifications to both OS platforms.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Result Achieved:</strong> <span>Reduced manual teacher admin reporting time by 30% and improved school communication rates.</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/leomaxvj" target="_blank" class="btn btn-secondary project-link"><i class="fab fa-github"></i> Repository</a>
+              <a href="#" class="btn btn-primary project-link disabled"><i class="fas fa-external-link-alt"></i> View Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Vehicle Tracking App -->
+        <div class="glass-panel project-card reveal" data-category="mobile">
+          <div class="project-img-wrapper">
+            <div class="project-category-badge">Mobile App</div>
+            <img src="images/work5.jpg" alt="Vehicle Tracking App">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Vehicle Tracking App</h3>
+            <p class="project-desc">Mobile solution for real-time tracking, fuel monitoring, and diagnostic alerts, significantly boosting fleet operational efficiency.</p>
+            <div class="project-techs">
+              <span class="project-tech">React Native</span>
+              <span class="project-tech">Expo</span>
+              <span class="project-tech">Google Maps API</span>
+              <span class="project-tech">IoT WebSockets</span>
+            </div>
+            <div class="project-meta-box">
+              <div class="project-meta-item">
+                <strong>Key Features:</strong> <span>Real-time GPS routing, active fuel tracking chart, engine diagnostic warnings.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Challenge Solved:</strong> <span>Streamed high-frequency IoT location parameters without freezing client-side map rendering.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Result Achieved:</strong> <span>Boosted overall fleet logistics efficiency by 20% and reduced engine idling times.</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/leomaxvj" target="_blank" class="btn btn-secondary project-link"><i class="fab fa-github"></i> Repository</a>
+              <a href="#" class="btn btn-primary project-link disabled"><i class="fas fa-external-link-alt"></i> View Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Hospital Management System -->
+        <div class="glass-panel project-card reveal" data-category="web" style="animation-delay: 0.1s;">
+          <div class="project-img-wrapper">
+            <div class="project-category-badge">Web & Mobile</div>
+            <img src="images/work6.jpg" alt="Hospital Management System">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Hospital Management System</h3>
+            <p class="project-desc">Centralized web admin panel and patient-facing mobile applications facilitating comprehensive patient records, staff shift schedules, and digital appointment bookings.</p>
+            <div class="project-techs">
+              <span class="project-tech">React.js</span>
+              <span class="project-tech">React Native</span>
+              <span class="project-tech">Node.js</span>
+              <span class="project-tech">Express.js</span>
+            </div>
+            <div class="project-meta-box">
+              <div class="project-meta-item">
+                <strong>Key Features:</strong> <span>Doctor booking calendars, electronic health records (EHR), digital prescriptions.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Challenge Solved:</strong> <span>Implemented secure encryption for storage and transmission of confidential medical files.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Result Achieved:</strong> <span>Cut patient check-in wait times by 35% and increased weekly booking capacities.</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/leomaxvj" target="_blank" class="btn btn-secondary project-link"><i class="fab fa-github"></i> Repository</a>
+              <a href="#" class="btn btn-primary project-link disabled"><i class="fas fa-external-link-alt"></i> View Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7: Inventory Management System -->
+        <div class="glass-panel project-card reveal" data-category="web">
+          <div class="project-img-wrapper">
+            <div class="project-category-badge">Web Application</div>
+            <img src="images/work7.jpg" alt="Inventory Management System">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Inventory Management System</h3>
+            <p class="project-desc">Web-based platform for live stock level updates, product variations cataloging, threshold alerts, and purchase order tracking.</p>
+            <div class="project-techs">
+              <span class="project-tech">React.js</span>
+              <span class="project-tech">Next.js</span>
+              <span class="project-tech">Redux Toolkit</span>
+              <span class="project-tech">Node.js</span>
+            </div>
+            <div class="project-meta-box">
+              <div class="project-meta-item">
+                <strong>Key Features:</strong> <span>Low-stock alerts notifications, bulk invoice exporting, catalog indexing.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Challenge Solved:</strong> <span>Optimized rendering speeds for tables containing over 50,000 active inventory entries.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Result Achieved:</strong> <span>Achieved zero-lag inventory queries and reduced manual stocktaking audits by 15 hours per week.</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/leomaxvj" target="_blank" class="btn btn-secondary project-link"><i class="fab fa-github"></i> Repository</a>
+              <a href="#" class="btn btn-primary project-link disabled"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8: Insurance Management System -->
+        <div class="glass-panel project-card reveal" data-category="web" style="animation-delay: 0.1s;">
+          <div class="project-img-wrapper">
+            <div class="project-category-badge">Web Application</div>
+            <img src="images/work8.jpg" alt="Insurance Management System">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Insurance Management System</h3>
+            <p class="project-desc">Complete administrative dashboard and customer portal enabling policy enrollment, claims uploading, and automated verification status tracking.</p>
+            <div class="project-techs">
+              <span class="project-tech">React.js</span>
+              <span class="project-tech">Redux</span>
+              <span class="project-tech">Context API</span>
+              <span class="project-tech">Node.js</span>
+            </div>
+            <div class="project-meta-box">
+              <div class="project-meta-item">
+                <strong>Key Features:</strong> <span>Dynamic questionnaire wizard, document scanner module, policy premium calculators.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Challenge Solved:</strong> <span>Built highly dynamic policy forms that compute premium prices on-the-fly based on risk levels.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Result Achieved:</strong> <span>Halved administrative policy creation overhead and streamlined client portal inquiries.</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/leomaxvj" target="_blank" class="btn btn-secondary project-link"><i class="fab fa-github"></i> Repository</a>
+              <a href="#" class="btn btn-primary project-link disabled"><i class="fas fa-external-link-alt"></i> View Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 9: IoT Industrial PWA -->
+        <div class="glass-panel project-card reveal" data-category="web">
+          <div class="project-img-wrapper">
+            <div class="project-category-badge">Web Application</div>
+            <img src="images/work_iot.jpg" alt="IoT Industrial PWA">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">IoT Industrial PWA</h3>
+            <p class="project-desc">Progressive Web Application integrating logical gate configurations (AND, OR, NOT) for remote industrial automation systems monitoring and control.</p>
+            <div class="project-techs">
+              <span class="project-tech">React.js</span>
+              <span class="project-tech">HTML5 Canvas</span>
+              <span class="project-tech">WebSockets</span>
+              <span class="project-tech">PWA Manifest</span>
+            </div>
+            <div class="project-meta-box">
+              <div class="project-meta-item">
+                <strong>Key Features:</strong> <span>Drag-and-drop logical gates grid, dynamic status graphs, active off-line execution.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Challenge Solved:</strong> <span>Constructed a high-speed simulation pipeline using WebGL canvas to output sub-10ms response loops.</span>
+              </div>
+              <div class="project-meta-item">
+                <strong>Result Achieved:</strong> <span>Granted technicians seamless offline control with instant server reconciliation upon reconnection.</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/leomaxvj" target="_blank" class="btn btn-secondary project-link"><i class="fab fa-github"></i> Repository</a>
+              <a href="#" class="btn btn-primary project-link disabled"><i class="fas fa-external-link-alt"></i> View Code</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: GITHUB SHOWCASE -->
+  <section id="github" class="section github-section">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <h2 class="section-title gradient-text">GitHub Showcase</h2>
+        <p class="section-subtitle">A live look into my contributions, active open source codebases, and tool patterns.</p>
+      </div>
+
+      <div class="github-grid">
+        <!-- Profile info card -->
+        <div class="glass-panel github-profile-card reveal" id="github-profile">
+          <img src="images/man2.JPG" alt="Manoj GitHub Avatar" class="github-avatar" id="gh-avatar">
+          <h3 class="github-name" id="gh-name">Manoj Kumar</h3>
+          <div class="github-username" id="gh-username">leomaxvj</div>
+          <p class="github-bio" id="gh-bio">React Native & React.js Developer | 3.5+ Years Experience in Mobile & Web Application Development</p>
+          
+          <div class="github-stats-row">
+            <div class="github-stat-item">
+              <div class="github-stat-num" id="gh-repos-val">18</div>
+              <div class="github-stat-label">Repos</div>
+            </div>
+            <div class="github-stat-item">
+              <div class="github-stat-num" id="gh-followers-val">12</div>
+              <div class="github-stat-label">Followers</div>
+            </div>
+            <div class="github-stat-item">
+              <div class="github-stat-num" id="gh-following-val">15</div>
+              <div class="github-stat-label">Following</div>
+            </div>
+          </div>
+          
+          <a href="https://github.com/leomaxvj" target="_blank" class="btn btn-primary" style="width: 100%;">
+            <i class="fab fa-github"></i> Visit Profile
+          </a>
+        </div>
+
+        <!-- Featured Repos list -->
+        <div class="github-repos-box reveal" style="animation-delay: 0.2s;">
+          <h4 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 5px;">Featured Repositories</h4>
+          
+          <!-- Repo 1 -->
+          <div class="glass-panel github-repo-card">
+            <div class="repo-header">
+              <div class="repo-name-wrap">
+                <i class="fas fa-book-bookmark" style="color: var(--accent-purple);"></i>
+                <a href="https://github.com/leomaxvj" target="_blank" class="repo-name">react-native-ecommerce</a>
+              </div>
+              <span class="repo-badge">Public</span>
+            </div>
+            <p class="repo-desc">Production-ready mobile e-commerce platform built with React Native CLI, featuring Stripe and Redux Toolkit state sync.</p>
+            <div class="repo-footer">
+              <div class="repo-left-meta">
+                <span class="repo-lang"><span class="lang-dot lang-react"></span> JavaScript</span>
+                <span class="repo-stars"><i class="far fa-star"></i> 4</span>
+                <span class="repo-forks"><i class="fas fa-code-fork"></i> 2</span>
+              </div>
+              <a href="https://github.com/leomaxvj" target="_blank" class="repo-link">Code <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Repo 2 -->
+          <div class="glass-panel github-repo-card">
+            <div class="repo-header">
+              <div class="repo-name-wrap">
+                <i class="fas fa-book-bookmark" style="color: var(--accent-cyan);"></i>
+                <a href="https://github.com/leomaxvj" target="_blank" class="repo-name">threejs-dragon-myth</a>
+              </div>
+              <span class="repo-badge">Public</span>
+            </div>
+            <p class="repo-desc">Interactive dragon mythology storytelling platform. GLTF compression, 3D model loaders, spatial music, and responsive viewports.</p>
+            <div class="repo-footer">
+              <div class="repo-left-meta">
+                <span class="repo-lang"><span class="lang-dot lang-ts"></span> TypeScript</span>
+                <span class="repo-stars"><i class="far fa-star"></i> 6</span>
+                <span class="repo-forks"><i class="fas fa-code-fork"></i> 1</span>
+              </div>
+              <a href="https://github.com/leomaxvj" target="_blank" class="repo-link">Code <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: LINKEDIN SECTION -->
+  <section id="linkedin" class="section">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <h2 class="section-title gradient-text">LinkedIn Profile</h2>
+        <p class="section-subtitle">Reach out on my professional network to discuss project pipelines, contracts, or engineering positions.</p>
+      </div>
+
+      <div class="glass-panel linkedin-card reveal">
+        <div class="linkedin-header">
+          <div class="linkedin-profile-info">
+            <img src="images/man2.JPG" alt="Manoj Kumar LinkedIn" class="linkedin-avatar">
+            <div>
+              <h3 class="linkedin-headline">Manoj Kumar</h3>
+              <p class="linkedin-subline">React Native & React.js Developer | ECE Graduate</p>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;"><i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu, India</p>
+            </div>
+          </div>
+          <a href="https://www.linkedin.com/in/manoj-kumar-95599a225/" target="_blank" class="btn btn-primary" style="background: var(--linkedin-blue); box-shadow: 0 4px 15px rgba(0, 119, 181, 0.2);">
+            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+          </a>
+        </div>
+
+        <div class="linkedin-body">
+          <p class="linkedin-summary-text">
+            Innovative software engineer with 3.5+ years of hands-on expertise building scalable hybrid mobile layouts (React Native/iOS) 
+            and desktop applications (React, Angular). Dedicated to shipping clean components, reducing load times, and supporting business logic teams.
+          </p>
+
+          <div class="linkedin-highlights">
+            <div class="linkedin-highlight-item">
+              <i class="fas fa-briefcase"></i>
+              <div>
+                <strong style="color: var(--text-primary);">Current Role:</strong>
+                <p style="font-size: 0.85rem;">Software Developer at IntecAI Tech Solutions</p>
+              </div>
+            </div>
+            <div class="linkedin-highlight-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <strong style="color: var(--text-primary);">Education:</strong>
+                <p style="font-size: 0.85rem;">B.E. in Electronics & Communication (ECE)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: EXPERIENCE SECTION -->
+  <section id="experience" class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <h2 class="section-title gradient-text">Work Experience</h2>
+        <p class="section-subtitle">A timeline of my professional software development roles, tech stacks, and metrics-driven business impact.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Role 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Software Developer</h3>
+              <div class="timeline-company">IntecAI Tech Solutions</div>
+            </div>
+            <span class="timeline-date">Dec 2024 - Dec 2025</span>
+          </div>
+          
+          <div class="timeline-achievements">
+            <div class="timeline-achievement">
+              <i class="fas fa-circle-check"></i>
+              <span>Direct frontend app architecture, maintaining clean atomic styling, and carrying out comprehensive peer reviews.</span>
+            </div>
+            <div class="timeline-achievement">
+              <i class="fas fa-circle-check"></i>
+              <span>Built a reusable component system, successfully <strong>reducing frontend development efforts by 30%</strong> across feature sprints.</span>
+            </div>
+            <div class="timeline-achievement">
+              <i class="fas fa-circle-check"></i>
+              <span>Integrated 15+ REST endpoints using Redux Toolkit Query, improving app state caching and network reliability.</span>
+            </div>
+            <div class="timeline-achievement">
+              <i class="fas fa-circle-check"></i>
+              <span><strong>Optimized application load speeds by 40%</strong> through lazy-loading components, code-splitting chunks, and React.memo components.</span>
+            </div>
+            <div class="timeline-achievement">
+              <i class="fas fa-circle-check"></i>
+              <span>Delivered 5+ cross-platform software versions on Android & iOS, coordinating closely with product managers and QA leads.</span>
+            </div>
+          </div>
+
+          <div class="timeline-techs">
+            <span class="timeline-tech-tag">React Native</span>
+            <span class="timeline-tech-tag">React.js</span>
+            <span class="timeline-tech-tag">Redux Toolkit</span>
+            <span class="timeline-tech-tag">REST APIs</span>
+            <span class="timeline-tech-tag">Git</span>
+            <span class="timeline-tech-tag">Figma</span>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="timeline-item reveal" style="animation-delay: 0.1s;">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Senior Software Engineer</h3>
+              <div class="timeline-company">Zealeye.AI Tech Solution Pvt. Ltd.</div>
+            </div>
+            <span class="timeline-date">Aug 2022 - Dec 2024</span>
+          </div>
+
+          <div class="timeline-achievements">
+            <div class="timeline-achievement">
+              <i class="fas fa-circle-check"></i>
+              <span>Designed and implemented responsive web layouts in React.js and Redux, which <strong>boosted overall user retention by 25%</strong>.</span>
+            </div>
+            <div class="timeline-achievement">
+              <i class="fas fa-circle-check"></i>
+              <span>Integrated custom Apple/Android push notifications and in-app triggers, resulting in a <strong>20% user engagement surge</strong>.</span>
+            </div>
+            <div class="timeline-achievement">
+              <i class="fas fa-circle-check"></i>
+              <span>Identified and fixed 80+ critical mobile interface bugs, dramatically increasing stability and scrolling performance.</span>
+            </div>
+            <div class="timeline-achievement">
+              <i class="fas fa-circle-check"></i>
+              <span>Utilized Chrome DevTools, Postman, and Node.js to profile network payloads and API parameters during integration testing.</span>
+            </div>
+            <div class="timeline-achievement">
+              <i class="fas fa-circle-check"></i>
+              <span>Administered QA environment testing and controlled platform release tickets using JIRA pipelines.</span>
+            </div>
+          </div>
+
+          <div class="timeline-techs">
+            <span class="timeline-tech-tag">React.js</span>
+            <span class="timeline-tech-tag">React Native</span>
+            <span class="timeline-tech-tag">JavaScript (ES6)</span>
+            <span class="timeline-tech-tag">Redux</span>
+            <span class="timeline-tech-tag">Node.js</span>
+            <span class="timeline-tech-tag">Bootstrap</span>
+            <span class="timeline-tech-tag">JIRA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: CERTIFICATIONS (Hidden) -->
+  <section id="certifications" class="section" style="display: none;">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <h2 class="section-title gradient-text">Certifications</h2>
+        <p class="section-subtitle">Additional training coursework and professional developer accreditations.</p>
+      </div>
+
+      <div class="certifications-grid">
+        <!-- Cert 1 -->
+        <div class="glass-panel cert-card reveal">
+          <div class="cert-icon">
+            <i class="fab fa-react"></i>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-title">React Native Certification</h3>
+            <p class="cert-issuer">Udemy Training Guild</p>
+            <p class="cert-id">Verification ID: RN-992384-VJ</p>
+          </div>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="glass-panel cert-card reveal" style="animation-delay: 0.1s;">
+          <div class="cert-icon">
+            <i class="fab fa-aws"></i>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-title">AWS Certified Cloud Practitioner</h3>
+            <p class="cert-issuer">Amazon Web Services</p>
+            <p class="cert-id">Verification ID: AWS-CCP-384910</p>
+          </div>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="glass-panel cert-card reveal" style="animation-delay: 0.2s;">
+          <div class="cert-icon">
+            <i class="fab fa-js"></i>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-title">Advanced JavaScript Certificate</h3>
+            <p class="cert-issuer">FreeCodeCamp Guild</p>
+            <p class="cert-id">Verification ID: FCC-JS-773418</p>
+          </div>
+        </div>
+
+        <!-- Cert 4 -->
+        <div class="glass-panel cert-card reveal">
+          <div class="cert-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-title">TypeScript Mastery Certificate</h3>
+            <p class="cert-issuer">CodeWithMosh Academy</p>
+            <p class="cert-id">Verification ID: TS-MOS-119472</p>
+          </div>
+        </div>
+
+        <!-- Cert 5 -->
+        <div class="glass-panel cert-card reveal" style="animation-delay: 0.1s;">
+          <div class="cert-icon">
+            <i class="fas fa-mobile-screen-button"></i>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-title">Google Mobile Web Specialist</h3>
+            <p class="cert-issuer">Google Developers Program</p>
+            <p class="cert-id">Verification ID: GGL-MWS-554201</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: EDUCATION -->
+  <section id="education" class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <h2 class="section-title gradient-text">Education Background</h2>
+        <p class="section-subtitle">Academic degrees and early technical training focus.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Education 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Bachelor of Engineering (ECE)</h3>
+              <div class="timeline-company">Annai Velankanni's College of Engineering</div>
+            </div>
+            <span class="timeline-date">2017 - 2021</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            Specialized in Electronics and Communication Engineering. Developed core foundations in data structures, 
+            microcontrollers, digital communication systems, and object-oriented programming foundations.
+          </p>
+        </div>
+
+        <!-- Education 2 -->
+        <div class="timeline-item reveal" style="animation-delay: 0.1s;">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Higher Secondary School</h3>
+              <div class="timeline-company">Anjuham Higher Secondary School</div>
+            </div>
+            <span class="timeline-date">2016 - 2017</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            Focused on Physics, Chemistry, and Advanced Mathematics. Cultivated core analytical, mathematical, and logical 
+            problem-solving competencies.
+          </p>
+        </div>
+
+        <!-- Education 3 -->
+        <div class="timeline-item reveal" style="animation-delay: 0.2s;">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Senior Secondary School</h3>
+              <div class="timeline-company">Ramakrishna Mission Hr. Sec. School</div>
+            </div>
+            <span class="timeline-date">2014 - 2015</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            General science and arithmetic studies. Earned early awards for programming logic drills.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11: CONTACT SECTION -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <h2 class="section-title gradient-text">Let's Connect</h2>
+        <p class="section-subtitle">Interested in working together or hiring me for a project? Drop a line below.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Info Column -->
+        <div class="contact-info-wrap reveal">
+          <div style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary);">Interested in working together?</div>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">
+            Let's build amazing web and mobile applications! I am open to full-time opportunities, consulting contracts, or freelance ventures.
+          </p>
+
+          <!-- Info card 1: Email -->
+          <div class="glass-panel contact-info-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text-wrap">
+              <span class="contact-label">Email</span>
+              <span class="contact-value"><a href="mailto:manojvj346@gmail.com">manojvj346@gmail.com</a></span>
+            </div>
+          </div>
+
+          <!-- Info card 2: Phone -->
+          <div class="glass-panel contact-info-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-text-wrap">
+              <span class="contact-label">Phone</span>
+              <span class="contact-value"><a href="tel:+919941817619">+91 99418 17619</a></span>
+            </div>
+          </div>
+
+          <!-- Quick buttons -->
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 10px;">
+            <a href="images/Manoj Kumar V.pdf" download class="btn btn-primary" style="width: 100%;">
+              <i class="fas fa-file-download"></i> Download Resume
+            </a>
+            <div style="display: flex; gap: 12px;">
+              <a href="https://github.com/leomaxvj" target="_blank" class="btn btn-secondary" style="flex: 1;">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/manoj-kumar-95599a225/" target="_blank" class="btn btn-secondary" style="flex: 1;">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Column -->
+        <div class="glass-panel contact-form-panel reveal" style="animation-delay: 0.2s;">
+          <h3 class="form-title">Send a Message</h3>
+          <p class="form-desc">I typically respond within 12-24 hours.</p>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div>
+              <label for="name-input" class="form-label">Name *</label>
+              <input type="text" id="name-input" name="name" class="form-input" placeholder="Your Name" required>
+            </div>
+            <div>
+              <label for="email-input" class="form-label">Email *</label>
+              <input type="email" id="email-input" name="email" class="form-input" placeholder="your.email@gmail.com" required>
+            </div>
+            <div class="form-group-full">
+              <label for="subject-input" class="form-label">Subject</label>
+              <input type="text" id="subject-input" name="subject" class="form-input" placeholder="Project collaboration">
+            </div>
+            <div class="form-group-full">
+              <label for="message-input" class="form-label">Message *</label>
+              <textarea id="message-input" name="message" class="form-input" placeholder="Describe your web/mobile app requirements..." required></textarea>
+            </div>
+            
+            <!-- Form status alerts -->
+            <div id="form-feedback" class="form-feedback"></div>
+
+            <div class="form-group-full" style="margin-top: 10px;">
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12: FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <a href="#hero" class="logo" style="font-size: 1.3rem;">Manoj <span>Kumar</span></a>
+      
+      <div class="footer-nav">
+        <a href="#hero" class="footer-nav-link">Home</a>
+        <a href="#summary" class="footer-nav-link">Summary</a>
+        <a href="#skills" class="footer-nav-link">Skills</a>
+        <a href="#projects" class="footer-nav-link">Projects</a>
+        <a href="#experience" class="footer-nav-link">Experience</a>
+        <a href="#contact" class="footer-nav-link">Contact</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/leomaxvj" target="_blank" class="footer-social-link" aria-label="GitHub Profile">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/manoj-kumar-95599a225/" target="_blank" class="footer-social-link linkedin" aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="images/Manoj Kumar V.pdf" download class="footer-social-link" aria-label="Download Resume">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+      </div>
+
+      <div class="footer-copy">
+        &copy; 2026 Manoj Kumar. All rights reserved. | Built with Passion.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
