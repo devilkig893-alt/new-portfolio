@@ -242,14 +242,15 @@ function initProjectFilters() {
       const filterValue = btn.getAttribute('data-filter');
 
       projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
+        const categoryAttr = card.getAttribute('data-category') || '';
+        const categories = categoryAttr.split(' ');
         
         // Setup fade transition
         card.style.opacity = '0';
         card.style.transform = 'scale(0.95)';
         
         setTimeout(() => {
-          if (filterValue === 'all' || category === filterValue) {
+          if (filterValue === 'all' || categories.includes(filterValue)) {
             card.style.display = 'flex';
             setTimeout(() => {
               card.style.opacity = '1';
