@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight } from "lucide-react";
@@ -13,6 +13,7 @@ interface Project {
   id: string;
   title: string;
   category: string;
+  filterCategory: "own" | "mobile" | "enterprise";
   desc: string;
   image: string;
   techs: string[];
@@ -24,6 +25,7 @@ const projectsData: Project[] = [
     id: "01",
     title: "KINGS OF ANARCHY (3D CHESS)",
     category: "INTERACTIVE GAME / CANVAS / WEBGL",
+    filterCategory: "own",
     desc: "A luxury AAA-style 3D chess game built using React, Three.js, and GSAP. Play against an intelligent minimax local computer engine inside a highly detailed interactive room.",
     image: "/images/chess_game.jpg",
     techs: ["React", "Three.js", "GSAP", "WebGL"],
@@ -33,6 +35,7 @@ const projectsData: Project[] = [
     id: "02",
     title: "PETAL & PIPE FLORAL STUDIO",
     category: "LUXURY BOTANICAL E-COMMERCE / NEXT.JS",
+    filterCategory: "own",
     desc: "A luxury handcrafted botanical studio and keepsake e-commerce platform. Features curated velvet chenille bouquets, bespoke soy candles, custom gift box builders, and direct WhatsApp/UPI artisan checkout.",
     image: "/images/petal_pipe.jpg",
     techs: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion", "E-Commerce"],
@@ -42,6 +45,7 @@ const projectsData: Project[] = [
     id: "03",
     title: "FORD GARAGE 3D SHOWROOM",
     category: "3D VEHICLE CUSTOMIZER / THREE.JS",
+    filterCategory: "own",
     desc: "Immersive 3D customizer for vintage Mustangs and modern supercars. Built with React Three Fiber, custom paint shaders, bloom postprocessing, and animated orbit cameras.",
     image: "/images/ford_garage.jpg",
     techs: ["React Three Fiber", "Three.js", "GSAP", "Tailwind CSS"],
@@ -51,6 +55,7 @@ const projectsData: Project[] = [
     id: "04",
     title: "WEATHERWISE FORECAST DASHBOARD",
     category: "CINEMATIC DASHBOARD / NEXT.JS / RADAR",
+    filterCategory: "own",
     desc: "A cinematic, high-end weather forecasting dashboard and live interactive radar platform. Features live OpenWeather telemetry, RainViewer animated Doppler radar maps, dynamic atmospheric condition theming, UV index, and hourly air metrics.",
     image: "/images/weather_app.jpg",
     techs: ["Next.js", "TypeScript", "Tailwind CSS", "OpenWeather API", "RainViewer", "Framer Motion"],
@@ -60,6 +65,7 @@ const projectsData: Project[] = [
     id: "05",
     title: "JS QUEST CODING SANDBOX",
     category: "GAMIFIED PORTAL / NEXT.JS",
+    filterCategory: "own",
     desc: "Gamified learning sandbox where users solve JavaScript data structure quests, complete challenges, and compile code in-browser.",
     image: "/images/js_quest.jpg",
     techs: ["Next.js", "Tailwind CSS", "Context API", "Lucide Icons"],
@@ -69,6 +75,7 @@ const projectsData: Project[] = [
     id: "06",
     title: "NIVEDHA ARTISTRY PORTFOLIO",
     category: "LUXURY CAMPAIGNS PORTAL",
+    filterCategory: "own",
     desc: "A couture makeup artistry portfolio showcasing high-end bridal transformations, fashion runways, and editorial campaigns with elegant styling and smooth page transitions.",
     image: "/images/nivis_portfolio.jpg",
     techs: ["Next.js", "Framer Motion", "Tailwind CSS"],
@@ -78,6 +85,7 @@ const projectsData: Project[] = [
     id: "07",
     title: "MERGIT DELIVERY APP",
     category: "MOBILE APP / CROSS PLATFORM",
+    filterCategory: "mobile",
     desc: "A high-performance grocery shipping mobile application built with React Native. Integrates real-time GPS coordinate mapping, administrative sorting pipelines, and WebSocket feeds.",
     image: "/images/work1.jpg",
     techs: ["React Native", "Expo", "Redux", "WebSockets"],
@@ -87,6 +95,7 @@ const projectsData: Project[] = [
     id: "08",
     title: "VEHICLE GPS TRACKING APP",
     category: "FLEET MANAGEMENT MOBILE APP",
+    filterCategory: "mobile",
     desc: "IoT asset tracker visualizing real-time telemetry metrics, fuel usage logs, battery indicators, and alert notifications.",
     image: "/images/work5.jpg",
     techs: ["React Native", "Expo", "Google Maps API", "WebSockets"],
@@ -96,6 +105,7 @@ const projectsData: Project[] = [
     id: "09",
     title: "E-COMMERCE WEB APP",
     category: "WEB PLATFORM / FULL STACK",
+    filterCategory: "enterprise",
     desc: "Comprehensive platform for stationery, toys, and games with complete shopping cart, checkout system, and admin panel for inventory and sales management.",
     image: "/images/work2.jpg",
     techs: ["React", "Node.js", "Express", "MongoDB"],
@@ -105,6 +115,7 @@ const projectsData: Project[] = [
     id: "10",
     title: "AQUA WATER DELIVERY APP",
     category: "MOBILE APP / BACKEND",
+    filterCategory: "mobile",
     desc: "Mobile application enabling delivery scheduling, product management, and customer service alongside admin panel operations.",
     image: "/images/work3.jpg",
     techs: ["React Native", "Expo", "Firebase", "Node.js"],
@@ -114,6 +125,7 @@ const projectsData: Project[] = [
     id: "11",
     title: "SCHOOL MANAGEMENT SYSTEM",
     category: "WEB PANEL / COMPANION APPS",
+    filterCategory: "enterprise",
     desc: "Admin web panel with companion parent and teacher mobile applications handling attendance monitoring, announcement communications, and student services.",
     image: "/images/work4.jpg",
     techs: ["Angular", "React Native", "Express", "MongoDB"],
@@ -123,6 +135,7 @@ const projectsData: Project[] = [
     id: "12",
     title: "HOSPITAL MANAGEMENT SYSTEM",
     category: "WEB PORTAL / NATIVE APPS",
+    filterCategory: "enterprise",
     desc: "Centralized web admin panel and patient-facing mobile applications facilitating comprehensive patient records, staff shift schedules, and digital bookings.",
     image: "/images/work5.jpg",
     techs: ["React", "React Native", "Firebase", "Firestore"],
@@ -132,6 +145,7 @@ const projectsData: Project[] = [
     id: "13",
     title: "INVENTORY MANAGEMENT SYSTEM",
     category: "STOCK LOGISTICS PLATFORM",
+    filterCategory: "enterprise",
     desc: "Web-based platform for live stock level updates, product variations cataloging, threshold alerts, and purchase order tracking.",
     image: "/images/work1.jpg",
     techs: ["React", "Express", "MongoDB", "Redux"],
@@ -141,6 +155,7 @@ const projectsData: Project[] = [
     id: "14",
     title: "INSURANCE MANAGEMENT SYSTEM",
     category: "ENTERPRISE DASHBOARD",
+    filterCategory: "enterprise",
     desc: "Complete administrative dashboard and customer portal enabling policy enrollment, claims uploading, and automated verification status tracking.",
     image: "/images/work2.jpg",
     techs: ["Angular", "Node.js", "SQL", "Express"],
@@ -150,6 +165,7 @@ const projectsData: Project[] = [
     id: "15",
     title: "IOT INDUSTRIAL PWA",
     category: "INDUSTRIAL IOT PORTAL",
+    filterCategory: "enterprise",
     desc: "Progressive Web Application integrating logical gate configurations (AND, OR, NOT) for remote industrial automation systems monitoring and control.",
     image: "/images/work3.jpg",
     techs: ["React", "Tailwind CSS", "WebSockets", "PWA"],
@@ -159,6 +175,12 @@ const projectsData: Project[] = [
 
 export default function Projects() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [activeFilter, setActiveFilter] = useState<"all" | "own" | "mobile" | "enterprise">("all");
+
+  const filteredProjects = projectsData.filter((project) => {
+    if (activeFilter === "all") return true;
+    return project.filterCategory === activeFilter;
+  });
 
   useEffect(() => {
     const boxes = gsap.utils.toArray(".project-reveal-box");
@@ -184,7 +206,9 @@ export default function Projects() {
         }
       );
     });
-  }, []);
+
+    ScrollTrigger.refresh();
+  }, [activeFilter]);
 
   return (
     <section
@@ -195,7 +219,7 @@ export default function Projects() {
       <div className="mx-auto w-full max-w-[1320px]">
         
         {/* Section Title */}
-        <div className="mb-16 md:mb-20">
+        <div className="mb-12 md:mb-16">
           <span className="font-mono text-xs tracking-[0.25em] text-[#929292] uppercase">
             04 — SELECTED WORK
           </span>
@@ -204,9 +228,31 @@ export default function Projects() {
           </h2>
         </div>
 
+        {/* Category Filter Tabs */}
+        <div className="flex flex-wrap items-center gap-3 mb-10">
+          {[
+            { id: "all", label: "ALL PROJECTS" },
+            { id: "own", label: "OWN PROJECTS" },
+            { id: "mobile", label: "MOBILE APPS" },
+            { id: "enterprise", label: "ENTERPRISE & WEB" },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveFilter(tab.id as any)}
+              className={`rounded-full px-5 py-2 font-mono text-xs font-bold uppercase tracking-widest transition-all duration-300 ${
+                activeFilter === tab.id
+                  ? "bg-[#FF1F2D] text-white shadow-lg shadow-[#FF1F2D]/25"
+                  : "bg-white/5 border border-white/10 text-[#929292] hover:text-white hover:border-white/20"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
         {/* Responsive Equal-Width Grid (2 columns on desktop) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full">
-          {projectsData.map((project) => {
+          {filteredProjects.map((project) => {
             const hasLiveDemo = Boolean(project.demoUrl && project.demoUrl !== "#");
 
             return (
