@@ -1,0 +1,31 @@
+# Dark Premium Portfolio Redesign Checklist
+
+- `[x]` **Phase 1: Styles & Global Layout**
+  - `[x]` Overhaul `globals.css` for the dark theme (#050505) and red accent (#FF1E2D)
+  - `[x]` Update `layout.tsx` settings
+- `[x]` **Phase 2: Core Interaction Components**
+  - `[x]` Rewrite `Cursor.tsx` (small white dot, expands to "VIEW →" capsule on projects)
+  - `[x]` Rewrite `Navigation.tsx` (floating dark translucent top pill, red contact button)
+- `[x]` **Phase 3: 3D Scene Adjustments**
+  - `[x]` Modify `CharacterScene.tsx` lighting for a dark scene with red rim-lights
+  - `[x]` Modify `HeroCharacter.tsx` position offsets to overlap typography on the right
+- `[x]` **Phase 4: Hero, Intro & About Sections**
+  - `[x]` Rewrite `Hero.tsx` with massive header, micro UI floating badges, and CTA buttons
+  - `[x]` Rewrite `Introduction.tsx` (I BUILD INTERFACES THAT FEEL ALIVE.) with translateY reveals
+  - `[x]` Rewrite `About.tsx` (BUILDING DIGITAL EXPERIENCES THAT FEEL RIGHT.) with split visual/text columns
+- `[x]` **Phase 5: Services, Tools & Experience**
+  - `[x]` Create `Services.tsx` ("What I Build" interactive service cards that hover to red)
+  - `[x]` Rewrite `Skills.tsx` ("Tools I Use" grid of small dark rounded squares that scale & turn red)
+  - `[x]` Rewrite `Experience.tsx` (timeline with growing lines, active red node dots)
+- `[x]` **Phase 6: Projects, Spotlight & Philosophy**
+  - `[x]` Rewrite `Projects.tsx` (asymmetric grid, image scroll-in clip-path, hover lifting)
+  - `[x]` Rewrite `FordFeatured.tsx` (giant Ford Garage automotive spotlight)
+  - `[x]` Rewrite `Philosophy.tsx` (opposite-scrolling parallax text lines)
+- `[x]` **Phase 7: Contact, Footer & Build Verification**
+  - `[x]` Rewrite `Contact.tsx` and `Footer.tsx` in dark/red
+  - `[x]` Run build checks & resolve any TypeScript or layout issues
+- `[x]` **Phase 8: Alignment & Breakpoint Sync Fixes**
+  - `[x]` Fix Navigation bar overlap and full-width stretching by resolving `top-0` class conflicts and setting `w-[90%]` with responsive bounds
+  - `[x]` Sync grid splitting breakpoints from `lg:` to `md:` (768px) across Hero, About, Projects, FordFeatured, and Contact sections to prevent vertical stacking glitches on tablet sizes
+  - `[x]` Recalculate title clamps (`hero-title-clamp` and `section-title-clamp`) in `globals.css` to prevent typography overlaps and text wrapping spillover
+  - `[x]` Remove CSS `transition-all` on buttons to prevent transform property collisions with GSAP cursor attraction, and widen CTA buttons to prevent squishing

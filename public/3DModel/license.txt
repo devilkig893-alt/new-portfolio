@@ -1,0 +1,11 @@
+Model Information:
+* title:	BLOOD RAVEN 3D MODEL
+* source:	https://sketchfab.com/3d-models/blood-raven-3d-model-c6bea9e6b22340229988c37219ebd4e7
+* author:	Render_Vendor (https://sketchfab.com/Render_Vendor)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "BLOOD RAVEN 3D MODEL" (https://sketchfab.com/3d-models/blood-raven-3d-model-c6bea9e6b22340229988c37219ebd4e7) by Render_Vendor (https://sketchfab.com/Render_Vendor) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

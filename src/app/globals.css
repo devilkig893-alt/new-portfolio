@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-bg: #050505;
+  --color-secondary-bg: #070707;
+  --color-panel-bg: #0B0B0B;
+  --color-border-main: rgba(255, 255, 255, 0.12);
+  
+  --color-text-white: #F7F7F7;
+  --color-text-muted: #929292;
+  
+  --color-accent-red: #FF1F2D;
+  
+  --font-space: var(--font-space-grotesk), sans-serif;
+  --font-jakarta: var(--font-plus-jakarta), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
+}
+
+:root {
+  --background: #050505;
+  --foreground: #F7F7F7;
+  --page-padding: clamp(20px, 4vw, 48px);
+  --content-width: 1320px;
+  --accent: #FF1F2D;
+  --border: rgba(255, 255, 255, 0.12);
+}
+* {
+  box-sizing: border-box;
+  /* margin: 0; */
+  /* padding: 0; */
+}
+
+html, body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: #050505;
+  color: #F7F7F7;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: #050505;
+  color: #F7F7F7;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* Custom premium scrollbar with red indicator */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 31, 45, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF1F2D;
+}
+
+/* Text Stroke effect for outline titles */
+.text-stroke-main {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.18);
+}
+
+/* Global Content Container system - strictly centered and aligned */
+.global-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
+}
+
+.global-content-width {
+  width: 100%;
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Massive Typographic Clamps */
+.hero-title-clamp {
+  font-size: clamp(48px, 9vw, 160px);
+  line-height: 0.85;
+  letter-spacing: -0.06em;
+}
+
+.section-title-clamp {
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+/* Grid Backdrop for Playground */
+.tech-grid-backdrop {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 31, 45, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 31, 45, 0.03) 1px, transparent 1px);
+}
+
+/* Custom corner markers utility */
+.corner-tick {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: rgba(255, 31, 45, 0.35);
+  pointer-events: none;
+}
+
+/* Hide default cursor on desktop when custom cursor is active */
+@media (min-width: 1200px) {
+  body, a, button, select, input, textarea, [role="button"] {
+    cursor: none !important;
+  }
+}
+
+/* Baseline properties for GSAP reveal in selected works */
+.project-img-inner {
+  clip-path: inset(8% round 28px);
+  transform: scale(1.12);
+}
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-delay: 0s !important;
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}
+
+/* Override default Tailwind md:gap-20 spacing class */
+@media (min-width: 48rem) {
+  .md\:gap-20 {
+    gap: calc(var(--spacing) * 18);
+  }
+}
+
+@media (min-width: 48rem) {
+    .md\:py-14 {
+        /* padding-block: calc(var(--spacing) * 14); */
+    }
+}
